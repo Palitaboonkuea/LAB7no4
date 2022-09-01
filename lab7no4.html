@@ -1,0 +1,32 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script>
+        function countTheWord(str){
+            const strr = str.split(" ");
+            let sword1 = "the"
+            let sword2 = "The";
+            let count = 0;
+            for(let i = 0; i < strr.length; i++){
+                if(strr[i] == sword2 || strr[i] == sword1){
+                    count++;
+                } 
+           }
+          
+      
+      document.getElementById("count").value = count;
+      var inputObject = document.getElementById("count");
+      alert("มี The ทั้งหมด "+inputObject.value+" คำ");
+      
+    }
+    </script>
+</head>
+<body>
+    The eighth ruler of the Fifth dynasty in the late 25th century.<br><br>
+    <a href="#" onclick="countTheWord('The eighth ruler of the Fifth Dynasty in the late 25th century')">
+    Click for count 'the'</a>
+    <p id="count"></p>
+   
+    
+</body>
+</html>
